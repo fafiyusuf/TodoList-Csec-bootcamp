@@ -14,6 +14,15 @@
     justify-content: center;
     margin-left: 250px;
 }
+body.light-theme {
+    background-color: white;
+
+}
+body.dark-theme {
+    color: white;
+    background-color:#252525;
+}
+.li
 body{
    
     height: 100vh;
@@ -43,7 +52,7 @@ h4{
     margin-bottom: 500px;
     width: 221px;
     height: 174px;
-    left: 149px7
+    left: 149px
     
 
 
@@ -69,31 +78,56 @@ h4{
   height: 38px;
 }
 #mode{
-    background-color:#6C63FF;
-    color: white;
+    
     width:38px;
     height: 38px;
     border-radius: 10px;
     margin-left: 10px;
     font-size: 20px;
+    cursor: pointer;
+}
+body.light-theme #mode{
+    background-color:#6C63FF;
+    color: white;
+
+}
+body.dark-theme #mode{
+    background-color:#6C63FF;
+    color: white;
+
 }
 #option{
     width: 85px;
     height: 38px;
     border-radius: 10px;
     margin-left: 10px;
-    background-color: #6C63FF;
-    color: white;
+   
     cursor: pointer;
 }
-input{
+body.light-theme #option{
+    background-color: #6C63FF;
+    color: white;
+
+}
+body.dark-theme #option{
+    background-color: #6C63FF;
+    color: white;
+
+}
+body.light-theme input{
     border-color: #6C63FF;
     color: #6C63FF;
   
 }
+body.dark-theme input{
+    background-color: #252525;
+    border-color: white;
+    color: white;
+  
+}
 #glass{
     font-size: 25px;
-    color: #6C63FF;
+   
     margin-left: 550px;
     margin-bottom: 60px;
     position: absolute;
@@ -102,7 +136,12 @@ input{
     top: 120px;
 
 }
-
+body.light-theme #glass{
+    color: #6C63FF;
+}
+body.dark-theme #glass{
+    color:white;
+}
 li{
    
     list-style: none;
@@ -130,15 +169,24 @@ opacity: 0px;
     margin-right: 30px;
 }
 #add{
-    background-color:#6C63FF;
+  
     width: 50px;
    height: 50px;
    margin-left: 725px;
 border-radius: 50px;
 font-size: 38px;
-color:white;
-border-color: white;
+
 transform: translate(-50%,-50%);
+}
+body.light-theme #add{
+    color:white;
+    border-color: white;
+    background-color:#6C63FF;
+}
+body.dark-theme #add{
+    color:white;
+    border-color:#252525;
+    background-color:#6C63FF;
 }
 .option{
     border-radius: 20px;
@@ -150,7 +198,10 @@ transform: translate(-50%,-50%);
 span:hover .icons{
     visibility: visible;
 }
-hr{
+body.light-theme hr{
+    border-color:#6C63FF;
+}
+body.dark-theme hr{
     border-color:#6C63FF;
 }
 .popup{
@@ -177,6 +228,12 @@ hr{
     opacity: 0;
     
 }
+body.light-theme .popup .popup-content{
+    background-color: white;
+}
+body.dark-theme .popup .popup-content{
+    background-color: #252525;
+}
 .Note-Item{
     font-size: 25px;
     width: 525px;
@@ -189,9 +246,19 @@ hr{
     line-height: 20px;
    
 }
+.note{
+    display: flex;
+    justify-content: space-between;
+}
 .checkbox{
     width: 26px;
     height: 26px;
+}
+body.dark-theme .checkbox{
+    background-color: #252525;
+}
+body.light-theme .checkbox{
+    background-color:white;
 }
 .popup-content h3{
     display: flex;
@@ -211,18 +278,32 @@ hr{
 .cancel{
     font-size:17px ;
     border-radius: 5px;
-    color: #6C63FF;
-    border-color: #6C63FF;
+   
     width: 110px;
     height: 38px;
+}
+body.light-theme .cancel{
+    color: #6C63FF;
+    border-color: #6C63FF;
+}
+body.dark-theme .cancel{
+    color: #6C63FF;
+    border-color: #6C63FF;
+    background-color: #252525;
 }
 .apply{
     font-size:17px ;
     border-radius: 5px;
-    color:white;
-    background-color: #6C63FF;
     width: 110px;
     height: 38px;
+}
+body.light-theme .apply{
+    color:white;
+    background-color: #6C63FF;
+}
+body.dark-theme .apply{
+    color:white;
+    background-color: #6C63FF;
 }
 .popup .overlay{
     position:absolute;
@@ -253,3 +334,5 @@ hr{
     margin-left: 25px;
     border-radius: 8px;
 }
+
+    
