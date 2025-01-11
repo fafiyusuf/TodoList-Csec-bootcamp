@@ -28,7 +28,7 @@ body{
     height: 100vh;
 }
 .empty{
-    display: flex;
+    display: none;
     justify-content: center;
   
     width: 221px;
@@ -37,7 +37,6 @@ margin-bottom:  300px;
 margin-left: 100px;
 flex-direction: column;
 align-items: center;
-visibility: hidden; 
 
 
 }
@@ -77,6 +76,7 @@ h4{
   width: 595px;
   height: 38px;
 }
+/* #mode::hover */
 #mode{
     
     width:38px;

@@ -2,9 +2,10 @@ let notes = [];
 const emptyContainer = document.querySelector('.empty');
 function updateEmptyContainer() {
     if (notes.length === 0) {
-        emptyContainer.style.visibility = 'visible';
+
+        emptyContainer.style.display = 'flex';
     } else {
-        emptyContainer.style.visibility = 'hidden';
+        emptyContainer.style.display = 'none';
     }
 }
 
@@ -30,6 +31,7 @@ function createPopup(id) {
             urNote.value = ''; 
             updateNotes();
         }
+        updateEmptyContainer();
     }
 
     overlay.addEventListener("click", closePopup);
@@ -38,13 +40,15 @@ function createPopup(id) {
         addNotes();
         closePopup();
     });
-
+    
     return openPopup;
-}
 
+}
 function deleteNote(index) {
     notes.splice(index, 1);
     updateNotes();
+updateEmptyContainer();
+
 }
 
 function editNote(index) {
@@ -52,10 +56,9 @@ function editNote(index) {
     urNote.value = notes[index].text;
     notes.splice(index, 1);
     updateNotes();
-    openPopup();
+    popup();
 
 }
-
 function updateNotes() {
     const noteList = document.getElementById("list-container");
     noteList.innerHTML = ''; 
@@ -75,17 +78,15 @@ function updateNotes() {
         noteList.appendChild(listItem);
     });
 }
-// updateEmptyContainer();
-// function updateStats() {
-//     const completeTasks = notes.filter(note => note.completed).length;
-//     const totalTasks = notes.length;
-// }
+
 
 
 
 const popup = createPopup("#popup");
 document.querySelector("#add").addEventListener("click", popup);
+console.log(notes);
 updateEmptyContainer();
+
 
 let page = document.querySelector('body');
 let themeButton = document.querySelector('#mode');
